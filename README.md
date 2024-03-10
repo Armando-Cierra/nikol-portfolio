@@ -1,30 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nikol Personal Portfolio
 
-## Getting Started
+<div style="width: 100%">
+  <img src="./img/sym-header.png" style="width: 100%; border-radius: 12px" />
+</div>
 
-First, run the development server:
+### Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Responsive landing page done using HTML SCSS and Vanilla JS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit website [here](https://sym-landing-page.netlify.app/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Year:** 2020
+**Updated:** 2024
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### Technology Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [AOS](https://michalsnik.github.io/aos/)
+- [NextJS 12](https://nextjs.org/)
+- [Axios](https://axios-http.com/docs/intro)
+- [Nodemailer](https://www.nodemailer.com/)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [Swiper](https://swiperjs.com/)
