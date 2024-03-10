@@ -1,7 +1,7 @@
 # Nikol Personal Portfolio
 
 <div style="width: 100%">
-  <img src="./img/sym-header.png" style="width: 100%; border-radius: 12px" />
+  <img src="./public/nikol-header.png" style="width: 100%; border-radius: 12px" />
 </div>
 
 ### Project Description
