@@ -1,0 +1,161 @@
+@import 'variables';
+
+.barra{
+    width: 100%;
+    height: 80px;
+    background: $verde-oscuro;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(54, 68, 62, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .toggleBtn{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: ease-in-out .15s;
+        transition-delay: .1s;
+        div{
+            position: relative;
+            height: 4px;
+            border-radius: 3px;
+            width: 60%;
+            background-color: $blanco;
+
+            transition: ease-in-out .25s;
+            &::after, &::before{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 4px;
+                border-radius: 3px;
+                background-color: $blanco;
+                transition: ease-in-out .25s;
+            }
+            &::before{
+                transform: translateY(-.5rem);
+            }
+            &::after{
+                transform: translateY(.5rem);
+            }
+        }
+    }
+    .toggleBtn.active{
+        box-shadow: none;
+        div{
+            background: transparent;
+            &::before{
+                transform: rotate(135deg);
+            }
+            &::after{
+                transform: rotate(-135deg);
+            }
+        }
+    }
+    img{
+        height: 80%;
+    }
+}
+
+.menuEnlaces{
+    position: fixed;
+    top: 80px;
+    left: -80%;
+    z-index: 900;
+    width: 80%;
+    height: calc(100vh - 80px);
+    background: $blanco;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    box-shadow: 0 0 15px rgba(54, 68, 62, 0);
+    transition: ease-in-out .25s;
+    a{
+        text-decoration: none;
+        padding: .5rem 0;
+        padding-left: 2rem;
+        margin: .5rem 0;
+        font-size: 2rem;
+        font-weight: $bold;
+        color: $negro;
+        opacity: .5;
+        display: flex;
+        align-items: center;
+        transition: ease-in-out .15s;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 0px;
+            background: $verde;
+            transition: ease-in-out .25s;
+        }
+        &:hover{
+            opacity: 1;
+        }
+    }
+    a.active{
+        color: $naranja;
+        opacity: 1;
+        &::after{
+            width: 6px;
+        }
+    }
+    .decoracion{
+        position: fixed;
+        bottom: 0;
+        left: -80%;
+        width: 80%;
+        height: 2.5rem;
+        //background-size: 300% !important;
+        background:  $verde;
+        transition: ease-in-out .25s;
+    }
+}
+.menuEnlaces.active{
+    left: 0;
+    box-shadow: 0 0 15px rgba(54, 68, 62, .25);
+    .decoracion{
+        left: 0;
+    }
+}
+
+.backgroundMenu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    z-index: 800;
+    backdrop-filter: blur(5px);
+    display: none;
+    transition: ease-in-out .25s;
+}
+.backgroundMenu.active{
+    display: block;
+    animation-name: show;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes show{
+    0% {display: block;}
+    2% {background: rgba(0, 0, 0, 0);}
+    100% {background: rgba(122, 122, 122, 0.75);}
+}
+
+@media screen and(min-width: 700px){
+    .barra, .menuEnlaces{
+        display: none;
+    }
+}

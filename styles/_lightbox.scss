@@ -1,0 +1,35 @@
+@import 'variables';
+
+.lightbox{
+    background: rgba(255, 255, 255, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    backdrop-filter: blur(9px);
+    .caja{
+        width: 100%;
+        h2{
+            text-align: center;
+            color: $verde;
+            margin-bottom: 2rem;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            iframe{
+                border-radius: 1rem;
+            }
+        }
+    }
+    button{
+        margin-top: 2rem;
+    }
+}

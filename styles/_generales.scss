@@ -1,0 +1,122 @@
+@import 'variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  &::selection {
+    background: $verde;
+    color: $blanco;
+  }
+  p,
+  ol {
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: $light;
+  }
+  ol,
+  ul {
+    margin-left: 1rem;
+    li {
+      font-weight: $light;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  * {
+    p,
+    ol {
+      font-size: 1rem;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.contenedorSmall {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 1rem;
+  border: 2px solid $verde;
+  color: $verde;
+  background: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: ease-in-out 0.25s;
+  &:hover {
+    background: $verde;
+    color: $blanco;
+  }
+}
+.btn.full {
+  background: $verde;
+  color: $blanco;
+  &:hover {
+    background: $verde-oscuro;
+    border-color: $verde-oscuro;
+  }
+}
+.btn.naranja {
+  border: 2px solid $naranja;
+  color: $naranja;
+  &:hover {
+    background: $naranja;
+    color: $blanco;
+  }
+}
+.btn.naranja.full {
+  background: $naranja;
+  color: $blanco;
+  &:hover {
+    background: $naranja-oscuro;
+    border-color: $naranja-oscuro;
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  .whatsapp {
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.error404 {
+  .contenedorSmall {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      color: $verde;
+      margin-bottom: 2rem;
+    }
+    p {
+      color: $negro;
+      margin-bottom: 1rem;
+    }
+  }
+}

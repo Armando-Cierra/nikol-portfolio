@@ -1,0 +1,50 @@
+@import 'variables';
+
+.proyectoInfo {
+  padding-top: calc(80px + 3rem);
+  h2 {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    color: $verde;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .contenedor {
+    .texto {
+      text-align: justify;
+      margin-bottom: 2rem;
+      p,
+      ol,
+      ul {
+        margin-bottom: 1rem;
+      }
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 1rem;
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+    .botonera {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .proyectoInfo {
+    .contenedor {
+      .galeria {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

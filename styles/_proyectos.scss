@@ -1,0 +1,60 @@
+@import 'variables';
+
+.galeriaProyectos{
+    width: 100%;
+    padding-top: calc(80px + 3rem);
+    h2{
+        color: $verde;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        .proyectoCover{
+            background: $verde-claro;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: ease-in-out .15s;
+            &:hover{
+                transform: scale(1.02);
+                background: $verde-oscuro;
+                h3{
+                    color: $blanco;
+                }
+                img{
+                    opacity: .6;
+                }
+            }
+            img{
+                width: 100%;
+                border-bottom: 6px solid $verde-oscuro;
+                transition: ease-in-out .15s;
+            }
+            h3{
+                color: $negro;
+                text-align: center;
+                padding: 1rem;
+                transition: ease-in-out .15s;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 500px){
+    .galeriaProyectos{
+        .contenedor{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and(min-width: 1024px){
+    .galeriaProyectos{
+        .contenedor{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

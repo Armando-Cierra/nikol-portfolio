@@ -1,0 +1,25 @@
+{
+  "name": "portfolio_nikol",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^0.21.0",
+    "eslint-config-next": "12",
+    "next": "12",
+    "nodemailer": "^6.4.14",
+    "react": "17",
+    "react-dom": "17",
+    "sweetalert2": "^10.9.0",
+    "swiper": "^6.3.4",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "sass": "1.35.2"
+  }
+}

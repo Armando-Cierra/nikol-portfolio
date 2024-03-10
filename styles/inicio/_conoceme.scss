@@ -1,0 +1,77 @@
+@import '../variables';
+
+.conocemeHome{
+    margin-top: 1rem;
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        overflow: hidden;
+        .texto{
+            width: 100%;
+            background: $verde-claro;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .caja{
+                width: 100%;
+                max-width: 700px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    color: $naranja;
+                    font-family: $cursive;
+                    font-size: 3.5rem;
+                }
+                p{
+                    color: $gris;
+                }
+                h2, p{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        img{
+            width: 100%;
+            border-top: 1rem solid $verde;
+        }
+    }
+}
+
+@media screen and(min-width: 700px){
+    .conocemeHome{
+        .contenedor{
+            .texto, img{
+                width: 50%;
+            }
+            img{
+                border-top: none;
+                border-left: 1rem solid $verde;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1280px){
+    .conocemeHome{
+        .contenedor{
+            .texto{
+                width: 70%;
+                padding: 4rem;
+            }
+            img{
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1441px){
+    .conocemeHome{
+        .contenedor{
+            border-radius: 1rem;
+        }
+    }
+}

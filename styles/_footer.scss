@@ -1,0 +1,93 @@
+@import 'variables';
+
+footer{
+    padding-top: 4rem;
+    h2{
+        color: $verde;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    form{
+        width: 100%;
+        .contenedorSmall{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            .campo{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+                label{
+                    color: $gris;
+                    font-size: .8rem;
+                    margin-bottom: 0.5rem;
+                }
+                input, textarea{
+                    padding: .5rem;
+                    border: 2px solid $gris-claro;
+                    color: $negro;
+                    font-size: 1rem;
+                    border-radius: .5rem;
+                    transition: ease-in-out .15s;
+                    &:hover{
+                        border-color: $gris;
+                    }
+                    &:focus{
+                        box-shadow: 0 0 0 3px rgba(113, 173, 153, .3);
+                        border-color: $verde;
+                        color: $verde;
+                    }
+                }
+                textarea{
+                    resize: none;
+                }
+            }
+        }
+        .contenedor{
+            p{
+                color: crimson;
+                text-align: center;
+                margin-bottom: 2rem;
+                font-weight: $regular;
+            }
+        }
+        .botonera{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+    }
+    .base{
+        background: $verde;
+        padding: 1rem 0;
+        p{
+            text-align: center;
+            color: $blanco;
+        }
+        .redes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            a{
+                color: $blanco;
+                font-size: 1.5rem;
+                margin: 0 .5rem;
+                transition: ease-in-out .15s;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    footer{
+        form{
+            .contenedorSmall{
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1rem;
+            }
+        }
+    }
+}

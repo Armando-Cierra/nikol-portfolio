@@ -1,0 +1,66 @@
+@import '../variables';
+
+.servicios{
+    background: $verde-claro;
+    padding-bottom: 4rem;
+    .titulo{
+        width: 100%;
+        background: $verde;
+        padding: 2rem 0;
+        margin: 4rem 0;
+        h2{
+            text-align: center;
+            color: $blanco;
+        }
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        .servicio{
+            width: 100%;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: $blanco;
+            box-shadow: 0 0 15px rgba(54, 68, 62, .12);
+            transition: ease-in-out .25s;
+            img{
+                width: 100%;
+                border-bottom: 6px solid $naranja;
+            }
+            h3, p{
+                padding: 0 2rem;
+            }
+            h3{
+                margin: 1rem 0;
+                color: $verde;
+            }
+            p{
+                margin-bottom: 1rem;
+                color: $gris;
+            }
+            div{
+                padding: 0 2rem;
+                margin-bottom: 2rem;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 768px){
+    .servicios{
+        .contenedor{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and(min-width: 1024px){
+    .servicios{
+        .contenedor{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
